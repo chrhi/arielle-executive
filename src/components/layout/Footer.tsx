@@ -3,31 +3,22 @@ import { FaInstagram } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
-import MaxWidthWrapper from "../MaxWidthWrapper";
 
 function Footer() {
   return (
-    <MaxWidthWrapper className="mt-8">
-      <div className=" h-1/2 w-full flex md:flex-row flex-col justify-around items-start ">
+    <div className="w-full h-fit bg-gray-50 border-t">
+      <div className=" h-1/2  mx-auto w-full max-w-screen-xl flex md:flex-row flex-col justify-around items-start ">
         <div className="p-5 ">
           <ul>
             <p className="text-gray-800 font-bold text-3xl pb-6">
               Experteasy <span className="text-green-600">Arille</span>
             </p>
-            <div className="flex gap-6 pb-5">
-              <FaInstagram className="text-2xl cursor-pointer hover:text-yellow-600" />
-              <FaTwitter className="text-2xl cursor-pointer hover:text-green-600" />
-              <FaLinkedin className="text-2xl cursor-pointer hover:text-green-600" />
-              <FaYoutube className="text-2xl cursor-pointer hover:text-red-600" />
-            </div>
           </ul>
         </div>
         <div className="p-5">
           <ul>
             <p className="text-gray-800 font-bold text-2xl pb-4">Product</p>
-            <li className="text-gray-500 text-md pb-2 font-semibold hover:text-green-600 cursor-pointer">
-              Stocks
-            </li>
+
             <li className="text-gray-500 text-md pb-2 font-semibold hover:text-green-600 cursor-pointer">
               Futures & Options
             </li>
@@ -88,7 +79,7 @@ function Footer() {
           </span>
         </h1>
       </div>
-    </MaxWidthWrapper>
+    </div>
   );
 }
 

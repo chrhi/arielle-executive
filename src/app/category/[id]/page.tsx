@@ -1,14 +1,17 @@
+import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import { FC } from "react";
 
 interface pageAbdullahProps {}
 
 const page: FC = ({}) => {
   return (
-    <div>
-      <h1 className="text-3xl font-bold text-center my-16">
-        This page is not implemented yet
-      </h1>
-    </div>
+    <MaxWidthWrapper>
+      <main className="min-h-[600px] w-full flex justify-center items-center  flex-col  pt-4 ">
+        <p className="text-2xl font-bold text-center">
+          this page is not implemented yet
+        </p>
+      </main>
+    </MaxWidthWrapper>
   );
 };
 

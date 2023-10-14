@@ -6,6 +6,7 @@ import { ArrowRight } from "lucide-react";
 
 import MobileNav from "./MobileNav";
 import { blogCategories } from "@/config/data";
+import { cn } from "@/lib/utils";
 
 const Navbar = () => {
   return (
@@ -24,13 +25,16 @@ const Navbar = () => {
           <div className="hidden items-center justify-end gap-x-4 lg:flex">
             {blogCategories.map((item) => {
               return (
-                <Button
-                  variant="ghost"
-                  className="text-sm"
+                <Link
+                  href={"/category/yes"}
+                  className={cn(
+                    buttonVariants({ variant: "ghost" }),
+                    "text-sm"
+                  )}
                   key={item + "itemkey"}
                 >
                   {item}
-                </Button>
+                </Link>
               );
             })}
           </div>
