@@ -1,11 +1,14 @@
 "use client";
 
-import { FC } from "react";
+import { Button } from "@/components/ui/button";
 
-interface errorAbdullahProps {}
-
-const error: FC = ({}) => {
-  return <div>error</div>;
+const error = ({ error, reset }: { error: string; reset: () => void }) => {
+  return (
+    <div>
+      <h1>something went wrong </h1>
+      <Button onClick={reset}>try again</Button>
+    </div>
+  );
 };
 
 export default error;
