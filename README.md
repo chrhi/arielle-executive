@@ -1,6 +1,6 @@
 # ExperteasyArille Blogging
 
-![Website Screenshot](/Capture.PNG)
+![Website Screenshot](./public/Capture.PNG)
 
 Welcome to ExperteasyArille Blogging! This is a blog website built using Next.js, Tailwind CSS, React, and TypeScript. It's designed to provide valuable content in a user-friendly and efficient manner.
 
