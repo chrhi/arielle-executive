@@ -10,13 +10,13 @@ export function constructMetadata({
   title = " Experteasy Arille",
   description = " Experteasy Arille is a blog.",
   image = "/thumbnail.png",
-  icons = "/favicon.ico",
+
   noIndex = false,
 }: {
   title?: string;
   description?: string;
   image?: string;
-  icons?: string;
+
   noIndex?: boolean;
 } = {}): Metadata {
   return {
@@ -38,7 +38,7 @@ export function constructMetadata({
       images: [image],
       creator: "@joshtriedcoding",
     },
-    icons,
+
     metadataBase: new URL("https://quill-jet.vercel.app"),
     themeColor: "#FFF",
     ...(noIndex && {
