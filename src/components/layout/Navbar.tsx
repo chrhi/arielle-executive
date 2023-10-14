@@ -14,7 +14,8 @@ const Navbar = () => {
         <div className="flex h-14 items-center justify-between border-zinc-200">
           <Link href="/" className="flex text-xl z-40 font-semibold">
             <span>
-              Affiflate <span className="text-green-500">Blogging.</span>
+              Experteasy
+              <span className="text-green-500">Arille.</span>
             </span>
           </Link>
 

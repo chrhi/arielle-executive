@@ -12,7 +12,7 @@ function Footer() {
         <div className="p-5 ">
           <ul>
             <p className="text-gray-800 font-bold text-3xl pb-6">
-              Affilate<span className="text-green-600">Blogging</span>
+              Experteasy <span className="text-green-600">Arille</span>
             </p>
             <div className="flex gap-6 pb-5">
               <FaInstagram className="text-2xl cursor-pointer hover:text-yellow-600" />

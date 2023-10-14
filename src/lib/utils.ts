@@ -7,8 +7,8 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function constructMetadata({
-  title = "Quill - the SaaS for students",
-  description = "Quill is an open-source software to make chatting to your PDF files easy.",
+  title = " Experteasy Arille",
+  description = " Experteasy Arille is a blog.",
   image = "/thumbnail.png",
   icons = "/favicon.ico",
   noIndex = false,
