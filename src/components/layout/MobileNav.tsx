@@ -1,5 +1,6 @@
 "use client";
 
+import { Navs } from "@/config/Navigations";
 import { ArrowRight, Menu } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -33,24 +34,25 @@ const MobileNav = () => {
         <div className="fixed animate-in slide-in-from-top-5 fade-in-20 inset-0 z-0 w-full">
           <ul className="absolute bg-white border-b border-zinc-200 shadow-xl grid w-full gap-3 px-10 pt-20 pb-8">
             <>
-              <li>
-                <Link
-                  onClick={() => closeOnCurrent("/dashboard")}
-                  className="flex items-center w-full font-semibold"
-                  href="/dashboard"
-                >
-                  Dashboard
-                </Link>
-              </li>
-              <li className="my-3 h-px w-full bg-gray-300" />
-              <li>
-                <Link
-                  className="flex items-center w-full font-semibold"
-                  href="/sign-out"
-                >
-                  Sign out
-                </Link>
-              </li>
+              {Navs.map((item) => {
+                return (
+                  <>
+                    <li>
+                      <Link
+                        onClick={() =>
+                          closeOnCurrent(`/category/${item?.slug}`)
+                        }
+                        className="flex items-center w-full font-semibold"
+                        href="/dashboard"
+                      >
+                        {item.name}
+                      </Link>
+                    </li>
+                    <li className="my-3 h-px w-full bg-gray-300" />
+                    <li></li>
+                  </>
+                );
+              })}
             </>
           </ul>
         </div>
