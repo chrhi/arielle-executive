@@ -1,11 +1,15 @@
+import { Articles } from "@/components/Articles";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import PostCard from "@/components/PostCard";
 import PostCardLarg from "@/components/PostCardLarg";
 import RecentPosts from "@/components/RecentPosts";
+import RecomandedPosts from "@/components/RecomandedPosts";
 import { posts } from "@/config/data";
-import Image from "next/image";
+import { getPosts } from "@/lib/hygraph";
 
-export default function Home() {
+export default async function Home() {
+  const posts: BlogPost[] = await getPosts();
+  console.log(posts[0]?.node?.author);
   return (
     <MaxWidthWrapper>
       <main>
@@ -13,10 +17,10 @@ export default function Home() {
           <div className="md:w-[70%] mb-4 w-full   pt-4 h-fit min-h-[400px] ">
             <PostCardLarg
               auther="abdullah chehri"
-              description=" Marketing Learn the strategies and techniques to excel in affiliate marketing."
-              imageUrl="/image.png"
+              description={posts[0]?.node?.excerpt}
+              imageUrl={posts[0]?.node?.featuredImage?.url}
               publishedAr={new Date()}
-              title="The Art of Affiliate"
+              title={posts[0]?.node?.title}
               key={99}
             />
           </div>
@@ -24,20 +28,8 @@ export default function Home() {
             <RecentPosts />
           </div>
         </div>
-        <div className="w-full min-h-[600px] grid md:p-0 p-4 lg:grid-cols-3 gap-6 md:grid-cols-2 grid-cols-1">
-          {posts?.map((item) => {
-            return (
-              <PostCard
-                key={item.title}
-                auther={item.title}
-                description={item.description}
-                imageUrl={item.imageUrl}
-                publishedAr={item.publishedAt}
-                title={item.title}
-              />
-            );
-          })}
-        </div>
+        <RecomandedPosts posts={posts} />
+        <Articles posts={posts} />
       </main>
     </MaxWidthWrapper>
   );

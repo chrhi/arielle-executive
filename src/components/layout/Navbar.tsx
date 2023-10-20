@@ -8,17 +8,20 @@ import MobileNav from "./MobileNav";
 import { blogCategories } from "@/config/data";
 import { cn } from "@/lib/utils";
 import { Navs } from "@/config/Navigations";
+import Image from "next/image";
 
 const Navbar = () => {
   return (
-    <nav className="sticky h-14 inset-x-0 border-b top-0 z-30 w-full  border-gray-200 bg-white/75 backdrop-blur-lg transition-all">
+    <nav className=" h-24 inset-x-0 border-b  w-full  border-gray-200 bg-black backdrop-blur-lg transition-all">
       <MaxWidthWrapper>
-        <div className="flex h-14 items-center justify-between border-zinc-200">
+        <div className="flex h-24 items-center justify-between border-zinc-200">
           <Link href="/" className="flex text-xl z-40 font-semibold">
-            <span>
-              Experteasy
-              <span className="text-green-500">Arille.</span>
-            </span>
+            <Image
+              src={"/logo.webp"}
+              alt="logo image"
+              width={250}
+              height={40}
+            />
           </Link>
 
           <MobileNav />
@@ -30,7 +33,7 @@ const Navbar = () => {
                   href={`/category/${item?.slug}`}
                   className={cn(
                     buttonVariants({ variant: "ghost" }),
-                    "text-sm"
+                    "text-sm text-white"
                   )}
                   key={item + "itemkey"}
                 >
