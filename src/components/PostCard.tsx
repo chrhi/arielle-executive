@@ -9,6 +9,7 @@ interface PostCardAbdullahProps {
   description: string;
   auther: string;
   publishedAr: Date;
+  slug: string;
 }
 
 const PostCard: FC<PostCardAbdullahProps> = ({
@@ -17,9 +18,10 @@ const PostCard: FC<PostCardAbdullahProps> = ({
   imageUrl,
   publishedAr,
   title,
+  slug,
 }) => {
   return (
-    <Link href={"/post/hhhh"}>
+    <Link href={`/post/${slug}`}>
       <div className="w-[100%] mr-auto rounded-xl  bg-white hover:bg-gray-100 cursor-pointer   flex flex-col items-start">
         <div className="w-full  relative h-[250px]">
           <Image

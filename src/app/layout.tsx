@@ -1,5 +1,5 @@
 import Navbar from "@/components/layout/Navbar";
-import Script from "next/script";
+// import Script from "next/script";
 import { cn, constructMetadata } from "@/lib/utils";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -22,7 +22,7 @@ export default function RootLayout({
       <Providers>
         <body
           className={cn(
-            "min-h-screen font-sans selection:bg-green-500 antialiased grainy",
+            "min-h-screen font-sans selection:bg-black selection:text-white antialiased ",
             inter.className
           )}
         >
@@ -32,7 +32,7 @@ export default function RootLayout({
           <Footer />
         </body>
       </Providers>
-      <Script async src="//code.tidio.co/f4ntqdkrkcmkov2pbgapiuevig4fhtbq.js" />
+      {/* <Script async src="//code.tidio.co/f4ntqdkrkcmkov2pbgapiuevig4fhtbq.js" /> */}
     </html>
   );
 }

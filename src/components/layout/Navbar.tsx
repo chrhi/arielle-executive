@@ -30,9 +30,9 @@ const Navbar = () => {
             {Navs.map((item) => {
               return (
                 <Link
-                  href={`/category/${item?.slug}`}
+                  href={item.slug}
                   className={cn(
-                    buttonVariants({ variant: "ghost" }),
+                    buttonVariants({ variant: "link" }),
                     "text-sm text-white"
                   )}
                   key={item + "itemkey"}

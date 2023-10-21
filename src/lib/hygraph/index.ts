@@ -19,6 +19,8 @@ export const getPosts = async () => {
             slug
             title
             excerpt
+            recomanded
+            topPick
             featuredImage {
               url
             }
@@ -217,18 +219,6 @@ export const getFeaturedPosts = async () => {
   const result = await request(process.env.HYGRAPH_API_END_POINT!, query);
   // @ts-ignore
   return result.posts;
-};
-
-export const submitComment = async (obj: any) => {
-  const result = await fetch("/api/comments", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(obj),
-  });
-
-  return result.json();
 };
 
 export const getComments = async (slug: any) => {

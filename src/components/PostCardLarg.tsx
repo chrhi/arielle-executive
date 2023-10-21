@@ -9,6 +9,7 @@ interface PostCardAbdullahProps {
   description: string;
   auther: string;
   publishedAr: Date;
+  slug: string;
 }
 
 const PostCardLarg: FC<PostCardAbdullahProps> = ({
@@ -17,20 +18,16 @@ const PostCardLarg: FC<PostCardAbdullahProps> = ({
   imageUrl,
   publishedAr,
   title,
+  slug,
 }) => {
   return (
-    <Link href={"/post/hhhh"}>
+    <Link href={`/post/${slug}`}>
       <div className="md:w-[90%] w-full mr-auto rounded-xl  bg-white  flex flex-col items-start">
         <div className="w-full h-[100px] flex items-center justify-start">
-          <h1 className="text-start text-4xl font-bold text-black">
-            The Ultimate Home Office Setup Guide For 2023
-          </h1>
+          <h1 className="text-start text-4xl font-bold text-black">{title}</h1>
         </div>
 
         <div className="w-full h-fit flex flex-col  mb-4">
-          <h2 className="text-2xl font-bold text-zinc-950 text-start">
-            {title}
-          </h2>
           <p className="truncate">{description}</p>
         </div>
         <div className="w-full relative h-[400px]">
