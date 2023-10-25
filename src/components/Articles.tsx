@@ -8,7 +8,7 @@ interface RecomandedPostsAbdullahProps {
 
 export const Articles: FC<RecomandedPostsAbdullahProps> = ({ posts }) => {
   return (
-    <div className="w-full min-h-[250px] my-8 flex flex-col justify-start gap-y-4 items-start ">
+    <section className="w-full min-h-[250px] my-8 flex flex-col justify-start gap-y-4 items-start ">
       <h2 className="text-4xl font-bold text-start">Latests Updates</h2>
       <div className="w-full min-h-[250px] grid md:p-0 p-4 lg:grid-cols-3 gap-6 md:grid-cols-2 grid-cols-1">
         {posts?.map((item) => {
@@ -25,6 +25,6 @@ export const Articles: FC<RecomandedPostsAbdullahProps> = ({ posts }) => {
           );
         })}
       </div>
-    </div>
+    </section>
   );
 };

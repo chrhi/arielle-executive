@@ -1,10 +1,8 @@
 import { Articles } from "@/components/Articles";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
-import PostCard from "@/components/PostCard";
 import PostCardLarg from "@/components/PostCardLarg";
 import RecentPosts from "@/components/RecentPosts";
 import RecomandedPosts from "@/components/RecomandedPosts";
-import { posts } from "@/config/data";
 import { getPosts } from "@/lib/hygraph";
 
 export default async function Home() {
@@ -13,7 +11,7 @@ export default async function Home() {
   return (
     <MaxWidthWrapper>
       <main>
-        <div className="min-h-[600px]  w-full flex md:flex-row flex-col  justify-center pt-4 ">
+        <section className="min-h-[600px]  w-full flex md:flex-row flex-col  justify-center pt-4 ">
           <div className="md:w-[70%] mb-4 w-full   pt-4 h-fit min-h-[400px] ">
             <PostCardLarg
               slug={posts[0]?.node?.slug}
@@ -28,7 +26,7 @@ export default async function Home() {
           <div className="md:w-[30%] w-full  h-fit min-h-[400px] ">
             <RecentPosts posts={posts} />
           </div>
-        </div>
+        </section>
         <RecomandedPosts posts={posts} />
         <Articles posts={posts} />
       </main>

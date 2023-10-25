@@ -1,9 +1,7 @@
 import Navbar from "@/components/layout/Navbar";
-// import Script from "next/script";
 import { cn, constructMetadata } from "@/lib/utils";
 import { Inter } from "next/font/google";
 import "./globals.css";
-
 import { Toaster } from "@/components/ui/toaster";
 import Footer from "@/components/layout/Footer";
 import Providers from "@/components/Provider";
