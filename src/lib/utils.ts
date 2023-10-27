@@ -7,9 +7,9 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function constructMetadata({
-  title = " Experteasy Arille",
-  description = " Experteasy Arille is a blog.",
-  image = "/thumbnail.png",
+  title = "Arielle Executive",
+  description = " arielle executiveis a blog.",
+  image = "/Capture.PNG",
 
   noIndex = false,
 }: {
