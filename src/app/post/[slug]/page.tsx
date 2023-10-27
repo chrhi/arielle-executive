@@ -33,10 +33,10 @@ const page: FC<PageProps> = async ({ params }) => {
             className={`!object-cover`}
           />
         </div>
-        <h1 className="text-3xl font-semibold text-start my-6">
+        <h1 className="text-3xl font-semibold  text-start my-6">
           {post?.title}
         </h1>
-        <div className="w-[70%] mr-auto  h-fit mb-8 mt-4">
+        <div className=" w-full p-2 md:p-0 md:w-[90%] mr-auto  h-fit mb-8 mt-4">
           {post.content.raw.children.map((typeObj, index) => {
             const children = typeObj.children.map((item, itemindex) =>
               //@ts-ignore

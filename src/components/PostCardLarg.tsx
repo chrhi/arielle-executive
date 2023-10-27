@@ -23,8 +23,8 @@ const PostCardLarg: FC<PostCardAbdullahProps> = ({
   return (
     <Link href={`/post/${slug}`}>
       <div className="md:w-[90%] w-full mr-auto rounded-xl  bg-white  flex flex-col items-start">
-        <div className="w-full h-[100px] flex items-center justify-start">
-          <h1 className="text-start text-4xl font-bold text-black">{title}</h1>
+        <div className="w-full h-[150px] md:h-[100px] flex items-center justify-start">
+          <h1 className="text-start  text-4xl font-bold text-black">{title}</h1>
         </div>
 
         <div className="w-full h-fit flex flex-col  mb-4">
