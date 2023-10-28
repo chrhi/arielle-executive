@@ -4,11 +4,11 @@ import { Button, buttonVariants } from "../ui/button";
 
 import { ArrowRight } from "lucide-react";
 
-import MobileNav from "./MobileNav";
 import { blogCategories } from "@/config/data";
 import { cn } from "@/lib/utils";
 import { Navs } from "@/config/Navigations";
 import Image from "next/image";
+import NewMobilNav from "./NewMobilNav";
 
 const Navbar = () => {
   return (
@@ -24,7 +24,7 @@ const Navbar = () => {
             />
           </Link>
 
-          <MobileNav />
+          <NewMobilNav />
 
           <div className="hidden items-center justify-end gap-x-4 lg:flex">
             {Navs.map((item) => {

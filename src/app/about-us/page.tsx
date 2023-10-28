@@ -1,60 +1,77 @@
+/* eslint-disable react/no-unescaped-entities */
+import MaxWidthWrapper from "@/components/MaxWidthWrapper";
+import FadeIn from "@/components/animations/FadeIn";
+import Image from "next/image";
 import { FC } from "react";
 
 interface WebVitalsProps {}
 
 const WebVitalsPage: FC<WebVitalsProps> = ({}) => {
   return (
-    <div className="w-full min-h-screen flex flex-col justify-center items-center bg-pink-100">
-      <h1 className="text-5xl font-bold text-pink-600 text-center mb-4">
-        Web Vitals and Our Blog
-      </h1>
-      <p className="text-xl text-center max-w-2xl mt-4">
-        Web Vitals are a set of metrics that measure the user experience on a
-        website. They are important for ensuring that your website performs well
-        and provides a good user experience.
-      </p>
-      <p className="text-xl text-center max-w-2xl mt-4">
-        Our blog has implemented the following Web Vitals features:
-      </p>
-      <ul className="text-xl max-w-2xl ml-8">
-        <li>
-          1. **First Contentful Paint (FCP)**: This measures how quickly the
-          first content is painted on the screen. We optimize our blog to load
-          content as fast as possible.
-        </li>
-        <li>
-          2. **Largest Contentful Paint (LCP)**: We ensure that the largest
-          content element on the page loads quickly, so users can see and
-          interact with it without delay.
-        </li>
-        <li>
-          3. **Cumulative Layout Shift (CLS)**: To prevent unexpected layout
-          shifts that can be frustrating for users, we carefully manage the
-          layout of our blog.
-        </li>
-      </ul>
-      <p className="text-xl mt-4 max-w-2xl">
-        We continuously monitor and improve these metrics to provide the best
-        possible user experience on our blog.
-      </p>
-      <p className="text-xl mt-4 max-w-2xl">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus
-        elit eu malesuada efficitur. Nam ut tortor id libero tincidunt
-        hendrerit. Vestibulum ultrices euismod massa, nec auctor odio volutpat
-        nec. Curabitur nec vestibulum purus. Sed at elit eu nisl dictum varius.
-        Fusce a ligula sed nunc semper tincidunt. Aenean efficitur a arcu eu
-        tristique. Aenean at leo non mi fermentum tincidunt. Nam euismod
-        vehicula justo, non convallis velit tempor a.
-      </p>
-      <p className="text-xl mt-4 max-w-2xl">
-        Nullam lacinia ipsum a dui scelerisque vehicula. Proin dignissim, libero
-        eget viverra ullamcorper, urna elit efficitur lectus, non viverra ligula
-        nisl id ante. Etiam in hendrerit elit. Integer ac fermentum libero.
-        Integer sagittis massa a dolor bibendum tincidunt. Morbi viverra lectus
-        eget sem lacinia, non finibus augue euismod. Integer eget quam eget
-        justo pharetra cursus. Aenean eget velit eget odio aliquam facilisis.
-      </p>
-    </div>
+    <FadeIn>
+      <MaxWidthWrapper>
+        <div className="w-full min-h-[500px] h-fit pb-4 flex flex-col items-start p-8 ">
+          <h1 className="text-3xl text-pink-500 font-bold text-start">
+            Hi there to my project
+          </h1>
+          <p className="text-lg text-gray-700 text-start">
+            A project build by abdellah chehri
+          </p>
+
+          <h2 className="text-2xl font-bold text-start my-4">Web Vitals</h2>
+          <p className="text-lg text-gray-700 text-start">
+            are a set of essential performance metrics that help website owners
+            and developers assess the user experience of their websites. These
+            metrics are crucial for understanding how well a web page performs,
+            and they directly impact user satisfaction and search engine
+            rankings
+          </p>
+          <h2 className="text-2xl font-bold text-start my-4">
+            Largest Contentful Paint (LCP)
+          </h2>
+          <p className="text-lg text-gray-700 text-start">
+            LCP measures the loading performance of a web page by assessing the
+            time it takes for the largest and most significant piece of content
+            (usually an image or text block) to become visible in the user's
+            viewport
+          </p>
+
+          <h2 className="text-2xl font-bold text-start my-4">
+            First Input Delay (FID)
+          </h2>
+          <p className="text-lg text-gray-700 text-start">
+            FID quantifies the interactivity and responsiveness of a web page by
+            measuring the delay between a user's first interaction (e.g.,
+            clicking a button or a link) and the browser's response to that
+            interaction.
+          </p>
+
+          <h2 className="text-2xl font-bold text-start my-4">
+            Cumulative Layout Shift (CLS)
+          </h2>
+          <p className="text-lg text-gray-700 text-start">
+            CLS evaluates the visual stability of a web page by measuring the
+            extent to which page elements shift or move unexpectedly during page
+            load. It can be frustrating for users when items on a page suddenly
+            reposition, leading to accidental clicks or other unintended
+            interactions.
+          </p>
+
+          <h2 className="text-3xl text-blue-500 font-bold text-start my-4">
+            And this is our work
+          </h2>
+          <div className="w-full h-[150px]">
+            <Image
+              src={"/gtmatrix.PNG"}
+              alt="gtmatix screen shot"
+              width={1200}
+              height={150}
+              priority
+            />
+          </div>
+        </div>
+      </MaxWidthWrapper>
+    </FadeIn>
   );
 };
 
